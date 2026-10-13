@@ -1,0 +1,76 @@
+@import "../../css/sass/variables"
+@import "../../css/sass/media"
+
++respond-to(mobile)
+    .filter-container
+        section.side_block
+            padding: 0
+
++respond-to(tablet)
+    .filter-icon
+        width: $mobile-filter-icon-size
+        height: $mobile-filter-icon-size
+        padding: $mobile-filter-icon-padding
+        fill: none
+        stroke: var(--listing-card-icon-color, $mobile-filter-icon-stroke-color)
+
+    .filter-container
+        display: none
+        z-index: 300
+        top: 0
+        left: 0
+        overflow-y: auto
+        padding: 0
+        background: var(--content-background-color, $mobile-filter-icon-container-bg-color)
+
+        &_has-submit
+            padding-bottom: 64px
+
+        &_opened
+            display: flex
+
+        &__header
+            min-height: 64px
+            border-bottom: 1px solid var(--top-navigation-menu-border-color, $mobile-filter-icon-header-border-color)
+
+            &-title
+                font-size: 28px
+                font-weight: 300
+
+            &-close
+                width: 44px
+                height: 44px
+                fill: var(--body-font-color, $mobile-filter-icon-close-icon-color)
+                margin-#{$right}: -15px
+                margin-#{$left}: auto
+        @if ($mobile-filter-icon-container-padding != 0)
+            &__body
+                padding-left: $mobile-filter-icon-container-padding
+                padding-right: $mobile-filter-icon-container-padding
+
+        section.side_block
+            background: none
+            margin-bottom: 32px
+            box-shadow: none
+
+    .filter-container_opened
+        .search-button,
+        .align-button
+            position: fixed
+            bottom: 0
+            left: 0
+            width: 100%
+            padding: 15px
+            background: var(--content-background-color, $mobile-filter-icon-container-bg-color)
+            box-shadow: inset 0 1px 0 var(--top-navigation-menu-border-color, $mobile-filter-icon-header-border-color)
+
+        .search-button,
+        .align-button
+            a
+                display: none
+
+            input
+                width: 100%
+
+            #save_search
+                margin: 0

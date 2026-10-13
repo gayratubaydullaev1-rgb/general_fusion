@@ -1,0 +1,17 @@
+body.static-page #controller_area {
+  line-height: 1.625em; }
+  body.static-page #controller_area p {
+    padding-bottom: 24px; }
+  body.static-page #controller_area ul,
+  body.static-page #controller_area ol {
+    padding: 24px 18px; }
+    body.static-page #controller_area ul li,
+    body.static-page #controller_area ol li {
+      list-style: disc; }
+  body.static-page #controller_area p + ul,
+  body.static-page #controller_area p + ol {
+    padding-top: 0; }
+  body.static-page #controller_area p + h2,
+  body.static-page #controller_area p + h3,
+  body.static-page #controller_area p + h4 {
+    padding-bottom: 4px; }

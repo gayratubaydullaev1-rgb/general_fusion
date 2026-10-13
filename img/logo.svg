@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="60" viewBox="0 0 250 60" fill="none">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a73e8"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
+    </linearGradient>
+  </defs>
+
+  <text x="0" y="60"
+        textLength="250"
+        lengthAdjust="spacingAndGlyphs"
+        font-family="'Segoe UI', Arial, Helvetica, sans-serif"
+        font-size="60"
+        font-weight="900">
+    <tspan fill="url(#grad)">Uz</tspan><tspan fill="#333333">Market</tspan>
+  </text>
+</svg>
