@@ -17,7 +17,7 @@ $this -> assign('box_item_class', $class);
 <li {if $featured_account.ID}id="fla_{$featured_account.ID}"{/if} class="{$box_item_class}{if !$featured_account.Photo} no-picture{/if}">
     <div class="picture">
 	{if $account_types.$type.Page}
-        <a title="{$featured_account.Full_name}" {if $config.featured_new_window}target="_blank"{/if} href="{$featured_account.Personal_address}">
+        <a title="{$featured_account.Full_name}" {if $config.featured_new_window}target="_blank"{/if} href="{$featured_account.Personal_address}" rel="noopener">
     {/if}
             <img alt="{$featured_account.Full_name}"
                  src="{strip}
@@ -46,7 +46,7 @@ $this -> assign('box_item_class', $class);
 
 	<ul class="card-info">
 		<li class="title" title="{$featured_account.Full_name}">
-			{if $account_types.$type.Page}<a {if $config.featured_new_window}target="_blank"{/if} href="{$featured_account.Personal_address}">{/if}
+			{if $account_types.$type.Page}<a {if $config.featured_new_window}target="_blank"{/if} href="{$featured_account.Personal_address}" rel="noopener">{/if}
 				{$featured_account.Full_name}
 			{if $account_types.$type.Page}</a>{/if}
 		</li>

@@ -18,7 +18,7 @@
     <div class="main-column clearfix">
         {if $pictures_available}
             <div class="picture{if !$listing.Main_photo} no-picture{/if}">
-                <a title="{$listing.listing_title}" {if $config.view_details_new_window}target="_blank"{/if} href="{$listing.url}">
+                <a title="{$listing.listing_title}" {if $config.view_details_new_window}target="_blank"{/if} href="{$listing.url}" rel="noopener">
                     {if $listing.Photos_count > 1}
                     <div data-id="{$listing.ID}" class="listing-picture-slider">
                         <span class="listing-picture-slider__navbar d-flex h-100 relative">
@@ -71,7 +71,7 @@
                 <a class="link-large"
                     title="{$listing.listing_title}"
                     {if $config.view_details_new_window}target="_blank"{/if}
-                    href="{$listing.url}">
+                    href="{$listing.url}" rel="noopener">
                     {$listing.listing_title}
                 </a>
             </li>

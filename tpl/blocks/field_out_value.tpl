@@ -24,7 +24,7 @@
         <div class="uploaded-files d-flex flex-wrap">
             {foreach from=','|explode:$item.value item='file'}
                 {assign var='file_info' value=$file|pathinfo}
-                <a href="{$smarty.const.RL_FILES_URL}{$file}" target="_blank" class="d-flex flex-column uploaded-file mr-3">
+                <a href="{$smarty.const.RL_FILES_URL}{$file}" target="_blank" class="d-flex flex-column uploaded-file mr-3" rel="noopener">
                     <span class="uploaded-file__ext d-flex flex-column justify-content-center align-items-center hlight hborder">
                         {$file_info.extension}
                     </span>

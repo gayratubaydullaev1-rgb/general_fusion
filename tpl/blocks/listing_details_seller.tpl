@@ -31,7 +31,7 @@
         <div class="clearfix relative">
             {if $seller_info.Photo}
                 <div class="picture{if $seller_info.Thumb_width > 120} landscape{/if}">
-                    {if $seller_info.Own_page && !$owner_page}<a target="_blank" title="{$lang.visit_owner_page}" href="{$seller_info.Personal_address}">{/if}
+                    {if $seller_info.Own_page && !$owner_page}<a target="_blank" title="{$lang.visit_owner_page}" href="{$seller_info.Personal_address}" rel="noopener">{/if}
                     <img alt="{$lang.seller_thumbnail}"
                         class="mw-100"
                         src="{$smarty.const.RL_FILES_URL}{$seller_info.Photo}"

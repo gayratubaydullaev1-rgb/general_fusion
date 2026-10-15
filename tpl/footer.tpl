@@ -20,12 +20,12 @@
                         <div class="mobile-apps col-lg-3">
                             <h4 class="footer-menu-title">{$lang.footer_menu_mobile_apps}</h4>
                             {if $config.ios_app_url}
-                            <a class="d-inline-block pt-0 pt-lg-2 mb-lg-3" target="_blank" href="{$config.ios_app_url}">
+                            <a class="d-inline-block pt-0 pt-lg-2 mb-lg-3" target="_blank" href="{$config.ios_app_url}" rel="noopener">
                                 <img src="{$rlTplBase}img/app-store-icon.svg" alt="App store icon" loading="lazy" decoding="async" />
                             </a>
                             {/if}
                             {if $config.android_app_url}
-                            <a class="d-inline-block ml-3 ml-lg-0 mt-0" target="_blank" href="{$config.android_app_url}">
+                            <a class="d-inline-block ml-3 ml-lg-0 mt-0" target="_blank" href="{$config.android_app_url}" rel="noopener">
                                 <img src="{$rlTplBase}img/play-market-icon.svg" alt="Play market icon" loading="lazy" decoding="async" />
                             </a>
                             {/if}

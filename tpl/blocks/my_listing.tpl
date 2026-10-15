@@ -8,14 +8,14 @@
 
 <article class="item{if $listing.Featured_expire} featured{/if} {rlHook name='tplMyListingItemClass'}" id="listing_{$listing.ID}">{strip}
     <div class="title">
-        <a title="{$listing.listing_title}" {if $config.view_details_new_window}target="_blank"{/if} href="{$listing.url}">
+        <a title="{$listing.listing_title}" {if $config.view_details_new_window}target="_blank"{/if} href="{$listing.url}" rel="noopener">
             {$listing.listing_title}
         </a>
     </div>
     <div class="nav">
         {if $listing_type.Photo}
             <div class="info">
-                <a title="{$listing.listing_title}" {if $config.view_details_new_window}target="_blank"{/if} href="{$listing.url}">
+                <a title="{$listing.listing_title}" {if $config.view_details_new_window}target="_blank"{/if} href="{$listing.url}" rel="noopener">
                     <div class="picture{if !$listing.Main_photo} no-picture{/if}">
                         {rlHook name='tplMyListingItemPhoto'}
                         {if $listing.Featured_expire}<div class="label"><div title="{$lang.featured}">{$lang.featured}</div></div>{/if}

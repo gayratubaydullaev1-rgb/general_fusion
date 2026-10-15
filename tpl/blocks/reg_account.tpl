@@ -472,7 +472,7 @@
                         {if $fVal.$fKey == '1'}checked="checked"{/if} />
                     &nbsp;{$lang.agree}
 
-                    <a target="_blank" href="{pageUrl key=$field.Default}">
+                    <a target="_blank" href="{pageUrl key=$field.Default}" rel="noopener">
                         {phrase key='pages+name+'|cat:$field.Default}
                     </a>
                 </label>

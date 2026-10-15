@@ -410,7 +410,7 @@
                                             </a>
                                         </span>
                                         <span class="font-size-xs">
-                                            <a href="{$smarty.const.RL_FILES_URL}{$file}" target="_blank" class="d-flex mt-1 text-center text-break justify-content-center">{$file_info.filename}</a>
+                                            <a href="{$smarty.const.RL_FILES_URL}{$file}" target="_blank" class="d-flex mt-1 text-center text-break justify-content-center" rel="noopener">{$file_info.filename}</a>
                                         </span>
                                     </div>
                                 {/foreach}
@@ -494,7 +494,7 @@
                             {if $fVal.$fKey == '1'}checked="checked"{/if} />
                         &nbsp;{$lang.agree}
 
-                        <a target="_blank" href="{pageUrl key=$field.Default}">
+                        <a target="_blank" href="{pageUrl key=$field.Default}" rel="noopener">
                             {phrase key='pages+name+'|cat:$field.Default}
                         </a>
                     </label>

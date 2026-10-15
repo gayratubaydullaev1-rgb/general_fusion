@@ -27,7 +27,7 @@
                 {if $crossed_categories}
                     {foreach from=$crossed_categories item='crossed_category'}
                     <li data-id="{$crossed_category.ID}">
-                        <a href="javascript://" target="_blank">{phrase key='categories+name+'|cat:$crossed_category.Key}</a>
+                        <a href="javascript://" target="_blank" rel="noopener">{phrase key='categories+name+'|cat:$crossed_category.Key}</a>
                         <img src="{$rlTplBase}img/blank.gif" class="remove" alt="{$lang.remove}" title="{$lang.remove}" />
                     </li>
                     {/foreach}

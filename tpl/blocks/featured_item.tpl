@@ -21,7 +21,7 @@ $this -> assign('box_item_class', $class);
 <li {if $featured_listing.ID}id="fli_{$featured_listing.ID}"{/if} class="{$box_item_class} d-flex flex-column{if !$featured_listing.Main_photo} no-picture{/if}">
     {if $listing_types.$type.Photo}
         <div class="picture{if !$featured_listing.Main_photo} no-picture{/if}">
-            <a title="{$featured_listing.listing_title}" {if $config.featured_new_window}target="_blank"{/if} href="{$featured_listing.url}">
+            <a title="{$featured_listing.listing_title}" {if $config.featured_new_window}target="_blank"{/if} href="{$featured_listing.url}" rel="noopener">
                 {if $featured_listing.Photos_count > 1 && $block.Side != 'left'}
                 <div data-id="{$featured_listing.ID}" class="listing-picture-slider">
                     <span class="listing-picture-slider__navbar d-flex h-100 relative">
@@ -67,7 +67,7 @@ $this -> assign('box_item_class', $class);
 
     <ul class="card-info flex-fill">
         <li class="title" title="{$featured_listing.fields.title.value|strip_tags}">
-            <a {if $config.featured_new_window}target="_blank"{/if} href="{$featured_listing.url}">
+            <a {if $config.featured_new_window}target="_blank"{/if} href="{$featured_listing.url}" rel="noopener">
                 {$featured_listing.listing_title}
             </a>
         </li>

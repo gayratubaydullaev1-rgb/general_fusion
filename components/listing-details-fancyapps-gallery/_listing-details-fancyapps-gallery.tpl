@@ -5,7 +5,7 @@
         <div class="picture_locked hide">
             <div>
                 <div class="restricted-content text-center">
-                    <img class="locked-media" src="{$rlTplBase}img/blank.gif" />
+                    <img alt="" class="locked-media" src="{$rlTplBase}img/blank.gif" />
                     {if $isLogin}
                         <p class="picture-hint hide">{$lang.view_picture_not_available}</p>
                         <p class="video-hint hide">{$lang.watch_video_not_available}</p>

@@ -12,7 +12,7 @@
             <div class="account-name d-flex align-items-center">
                 <a href="{pageUrl key='my_profile'}">
                 {if $account_info.Photo}
-                    <img class="mr-2"
+                    <img alt="" class="mr-2"
                          src="{$smarty.const.RL_FILES_URL}{$account_info.Photo}"
                          {if $account_info.Photo_x2}srcset="{$smarty.const.RL_FILES_URL}{$account_info.Photo_x2} 2x"{/if} />
                 {/if}

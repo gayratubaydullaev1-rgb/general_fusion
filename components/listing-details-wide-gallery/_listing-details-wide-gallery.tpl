@@ -10,10 +10,10 @@
                         {if $photo.Type == 'video'}
                             {if $allow_photos || $smarty.foreach.photosF.first}
                                 {if $photo.video_key}
-                                    <img src="{$rlTplBase}img/blank16x10.gif" />
+                                    <img alt="" src="{$rlTplBase}img/blank16x10.gif" />
                                     <iframe src="{$photo.href}" frameBorder="0" allow="autoplay" id="embed_{$smarty.foreach.photosF.index}"></iframe>
                                 {else}
-                                    <img src="{$rlTplBase}img/blank16x10.gif" />
+                                    <img alt="" src="{$rlTplBase}img/blank16x10.gif" />
                                     <video controls id="local_video_{$smarty.foreach.photosF.index}">
                                         <source src="{$photo.href}" type="video/mp4">
                                     </video>
@@ -31,7 +31,7 @@
                             <div class="picture_locked">
                                 <div>
                                     <div class="restricted-content d-flex flex-column align-items-center">
-                                    <img src="{$rlTplBase}img/blank.gif" />
+                                    <img alt="" src="{$rlTplBase}img/blank.gif" />
                                     {if $isLogin}
                                         <p class="pl-3 pr-3">{if $photo.Type == 'video'}{$lang.watch_video_not_available}{else}{$lang.view_picture_not_available}{/if}</p>
                                         <span>

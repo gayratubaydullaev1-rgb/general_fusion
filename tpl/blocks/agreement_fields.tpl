@@ -19,7 +19,7 @@
                 {if $data_form}form="{$data_form}"{/if} />
             &nbsp;{$lang.agree}
 
-            <a target="_blank" href="{pageUrl key=$ag_field.Default}">
+            <a target="_blank" href="{pageUrl key=$ag_field.Default}" rel="noopener">
                 {phrase key='pages+name+'|cat:$ag_field.Default}
             </a>
         </label>

@@ -13,7 +13,7 @@
     <tr>
         {if !empty($listing.Main_photo)}
         <td valign="top">
-            <a title="{$listing.listing_title}" {if $config.view_details_new_window}target="_blank"{/if} href="{$listing.url}">
+            <a title="{$listing.listing_title}" {if $config.view_details_new_window}target="_blank"{/if} href="{$listing.url}" rel="noopener">
                 <img alt="{$listing.listing_title}" src="{$smarty.const.RL_FILES_URL}{$listing.Main_photo}" />
             </a>
         </td>
@@ -30,7 +30,7 @@
                 <td width="10px"></td>
                 <td>
                     {if $f_first}
-                        <a title="{$item.value}" {if $config.view_details_new_window}target="_blank"{/if} href="{$listing.url}">{$item.value}</a>
+                        <a title="{$item.value}" {if $config.view_details_new_window}target="_blank"{/if} href="{$listing.url}" rel="noopener">{$item.value}</a>
                     {else}
                         {$item.value}
                     {/if}

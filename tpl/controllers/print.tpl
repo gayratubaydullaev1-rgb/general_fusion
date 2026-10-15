@@ -37,7 +37,7 @@
 
 	<div class="header">
 		<div class="two-inline left clearfix">
-			<img src="{$rlTplBase}img/logo.{$logo_ext}?rev={$config.static_files_revision}" />
+			<img alt="" src="{$rlTplBase}img/logo.{$logo_ext}?rev={$config.static_files_revision}" />
 			<div class="site-name">{$config.site_name}</div>
 		</div>
 	</div>
@@ -191,7 +191,7 @@
 						<table class="sTable">
 						<tr>
 							<td rowspan="2" style="width: 100px;padding: 0 10px 0 0;" align="center" valign="top">
-								<img src="{if empty($listing.Main_photo)}{$rlTplBase}img/no-picture.jpg{else}{$smarty.const.RL_FILES_URL}{$listing.Main_photo}{/if}" />
+								<img alt="" src="{if empty($listing.Main_photo)}{$rlTplBase}img/no-picture.jpg{else}{$smarty.const.RL_FILES_URL}{$listing.Main_photo}{/if}" />
 							</td>
 							<td class="spliter" rowspan="2"></td>
 							<td valign="top" style="height: 65px">

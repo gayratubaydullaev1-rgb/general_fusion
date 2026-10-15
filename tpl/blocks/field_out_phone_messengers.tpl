@@ -11,8 +11,7 @@
             <a {if $hidden}href="javascript://" data-href="{$_phoneMessengersURLs.whatsapp}"
                {else}href="{$_phoneMessengersURLs.whatsapp}{$messengerPhoneNumber}" target="_blank"{/if}
                class="m{if $smarty.const.RL_LANG_DIR === 'ltr'}r{else}l{/if}-2 hover-brightness-affect messenger-icons__whatsapp"
-               title="{if $hidden}{$lang.phone_show_number}{/if}"
-            >
+               title="{if $hidden}{$lang.phone_show_number}{/if}" rel="noopener">
                 <img src="{$smarty.const.RL_LIBS_URL}icons/messengers/whatsapp.svg?rev={$config.static_files_revision}" alt="">
             </a>
         {/if}
@@ -21,8 +20,7 @@
             <a {if $hidden}href="javascript://" data-href="{$_phoneMessengersURLs.viber}"
                {else}href="{$_phoneMessengersURLs.viber}{$messengerPhoneNumber}" target="_blank"{/if}
                class="m{if $smarty.const.RL_LANG_DIR === 'ltr'}r{else}l{/if}-2 hover-brightness-affect messenger-icons__viber"
-               title="{if $hidden}{$lang.phone_show_number}{/if}"
-            >
+               title="{if $hidden}{$lang.phone_show_number}{/if}" rel="noopener">
                 <img src="{$smarty.const.RL_LIBS_URL}icons/messengers/viber.svg?rev={$config.static_files_revision}" alt="">
             </a>
         {/if}
@@ -31,8 +29,7 @@
             <a {if $hidden}href="javascript://" data-href="{$_phoneMessengersURLs.telegram}"
                {else}href="{$_phoneMessengersURLs.telegram}{$messengerPhoneNumber}" target="_blank"{/if}
                class="hover-brightness-affect messenger-icons__telegram"
-               title="{if $hidden}{$lang.phone_show_number}{/if}"
-            >
+               title="{if $hidden}{$lang.phone_show_number}{/if}" rel="noopener">
                 <img src="{$smarty.const.RL_LIBS_URL}icons/messengers/telegram.svg?rev={$config.static_files_revision}" alt="">
             </a>
         {/if}
