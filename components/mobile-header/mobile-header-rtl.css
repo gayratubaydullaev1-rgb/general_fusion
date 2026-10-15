@@ -193,13 +193,11 @@ html[data-color-theme="dark"] .theme-toggle__label_to-light {
     }
 }
 
-/* ---- hero banners: the whole banner is a link, no texts/buttons on mobile ---- */
+/* ---- hero banners: the whole banner is a link, no texts/buttons ---- */
 .carousel-slide-link {
     display: block;
     height: 100%;
 }
-@media screen and (max-width: 767px) {
-    #homeCarousel .carousel-caption {
-        display: none !important;
-    }
+#homeCarousel .carousel-caption {
+    display: none !important;
 }
