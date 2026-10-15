@@ -133,6 +133,14 @@ html[data-color-theme="dark"] .theme-toggle__label_to-light {
     .user-navbar-right .circle {
         min-height: 44px;
     }
+    /* compact icons: no dropdown arrows next to language / cart, more room for the search */
+    .top-header .user-navbar-right .circle > .default:after {
+        display: none;
+    }
+    .top-header .user-navbar-right .circle > .default {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 
     /* logo, "All categories" (mega menu) button and the row that held them */
     header.page-header:not(.fixed-menu) #logo,
