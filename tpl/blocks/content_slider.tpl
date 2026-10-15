@@ -26,10 +26,12 @@
     <div class="carousel-inner h-100">
         {foreach from=$home_slides item='slide' name='slides'}
             <div class="carousel-item{if $smarty.foreach.slides.first} active{/if}{if !trim($slide.title)} carousel-item_no-text{/if}">
+                {if $slide.URL}<a class="carousel-slide-link" href="{$slide.URL}" aria-label="{$slide.title|escape}">{/if}
                 <img class="carousel-picture d-block w-100 h-100"
                      {if $smarty.foreach.slides.first} fetchpriority="high"{/if}
                      src="{$smarty.const.RL_FILES_URL}slides/{$slide.Picture}"
                      alt="{$slide.title}">
+                {if $slide.URL}</a>{/if}
 
                 <div class="carousel-caption">
                     <h2 class="carousel-slide-heading">{$slide.title}</h2>
