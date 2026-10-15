@@ -9,6 +9,8 @@
 <meta charset="UTF-8" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
 
 <meta name="description" content="{$pageInfo.meta_description|strip_tags|escape}" />
 

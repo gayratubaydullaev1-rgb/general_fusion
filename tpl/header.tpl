@@ -4,6 +4,8 @@
 
 {include file='../img/gallery.svg'}
 
+<a class="skip-link" href="#main_container">{$lang.skip_to_content|default:'Skip to content'}</a>
+
 <div class="main-wrapper d-flex flex-column">
     <header class="page-header{if $config.mobile_footer_menu && $pageInfo.Key != 'search_on_map'} has-mobile-bar{/if}{if $pageInfo.Key == 'home' && !$config.main_menu_home_page} main-menu-hidden{/if}{if $pageInfo.Key == 'search_on_map'} fixed-menu{/if}">
         <div class="top-header content-padding mb-2 mb-md-3">
@@ -42,7 +44,7 @@
                     <div class="d-flex flex-wrap align-items-center position-relative justify-content-between gap-3 gap-xl-4">
                         <div class="mr-auto col-auto order-1" id="logo">
                             <a href="{$rlBase}" title="{$config.site_name}">
-                                <img alt="{$config.site_name}" src="{$rlTplBase}img/logo.svg?rev={$config.static_files_revision}" />
+                                <img alt="{$config.site_name}" width="200" height="40" src="{$rlTplBase}img/logo.svg?rev={$config.static_files_revision}" />
                             </a>
                         </div>
                         {if $pageInfo.Key != 'search_on_map'}

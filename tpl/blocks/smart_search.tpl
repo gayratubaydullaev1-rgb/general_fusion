@@ -6,8 +6,8 @@
         <input type="hidden" name="form" value="keyword_search" />
 
         <div class="w-100 position-relative">
-            <input name="f[keyword_search]" autocomplete="off" class="smart-search__input w-100" type="text" placeholder="{$lang.keyword_search_hint}" />
-            <div class="smart-search__close align-items-center justify-content-center">
+            <input name="f[keyword_search]" autocomplete="off" class="smart-search__input w-100" type="text" inputmode="search" enterkeyhint="search" aria-label="{$lang.keyword_search_hint|escape}" placeholder="{$lang.keyword_search_hint}" />
+            <div class="smart-search__close align-items-center justify-content-center" role="button" tabindex="0" aria-label="{$lang.close|default:'Close'}">
                 <svg viewBox="0 0 12 12" class="header-usernav-icon-fill">
                     <use xlink:href="#close-icon"></use>
                 </svg>

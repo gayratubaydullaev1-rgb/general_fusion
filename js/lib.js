@@ -297,14 +297,17 @@ var flynaxTplClass = function(){
 
         document.documentElement.setAttribute('data-color-theme', $switcher.attr('data-theme') || 'light');
 
+        // Keyboard activation (Enter / Space) for non-native buttons
+        $(document).on('keydown', 'span[role="button"][tabindex], div[role="button"][tabindex]', function(e){
+            if ((e.key == 'Enter' || e.key == ' ') && !$(e.target).is('input, textarea, select')) {
+                e.preventDefault();
+                $(this).trigger('click');
+            }
+        });
+
         // Mobile: the toggle in the profile menu (and its clone in the account popup) drives the same switcher
         $(document).on('click', '.js-theme-toggle', function(){
             $switcher.trigger('click');
-        }).on('keydown', '.js-theme-toggle', function(e){
-            if (e.key == 'Enter' || e.key == ' ') {
-                e.preventDefault();
-                $switcher.trigger('click');
-            }
         });
     }
 

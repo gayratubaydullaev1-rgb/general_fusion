@@ -20,7 +20,7 @@
     {/if}
 </div>
 
-<span class="menu-button pl-2 pr-2 d-flex d-md-none align-items-center" title="{$lang.menu}">
+<span class="menu-button pl-2 pr-2 d-flex d-md-none align-items-center" title="{$lang.menu}" role="button" tabindex="0" aria-label="{$lang.menu|escape}">
     <svg viewBox="0 0 20 14">
         <use xlink:href="#mobile-menu"></use>
     </svg>

@@ -220,3 +220,29 @@ html[data-color-theme="dark"] .theme-toggle__label_to-light {
         height: auto;
     }
 }
+
+/* skip link (visible on keyboard focus only) */
+.skip-link {
+    position: absolute;
+    left: 8px;
+    top: -60px;
+    z-index: 1000;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: var(--button-color, #1c77f2);
+    color: var(--button-text-color, #fff);
+    transition: top 0.15s;
+}
+.skip-link:focus {
+    top: 8px;
+    color: var(--button-text-color, #fff);
+}
+
+/* bigger touch area for the favorite button on cards (mobile) */
+@media screen and (max-width: 767px) {
+    .picture .favorite {
+        min-width: 36px;
+        min-height: 36px;
+        box-sizing: border-box;
+    }
+}
