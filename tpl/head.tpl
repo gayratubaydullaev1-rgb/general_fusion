@@ -8,7 +8,7 @@
 <meta name="generator" content="Flynax Classifieds Software" />
 <meta charset="UTF-8" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <meta name="description" content="{$pageInfo.meta_description|strip_tags|escape}" />
 

@@ -166,3 +166,29 @@ html[data-color-theme="dark"] .theme-toggle__label_to-light {
         padding-top: 8px;
     }
 }
+
+/* ---- accessibility and touch polish (mobile only) ---- */
+@media screen and (max-width: 767px) {
+    .menu-button:focus-visible,
+    .smart-search__input:focus-visible,
+    .smart-search__close:focus-visible,
+    .mb-menu__item:focus-visible,
+    #user-navbar > .default:focus-visible,
+    #lang-selector > .default:focus-visible {
+        outline: 2px solid var(--form-field-line-color, #1c77f2);
+        outline-offset: 2px;
+    }
+
+    /* drawer height follows the visible viewport (mobile browser toolbars) */
+    .mobile-menu {
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    .menu-button,
+    .mb-menu__item,
+    .circle > .default,
+    .smart-search__close {
+        touch-action: manipulation;
+    }
+}
