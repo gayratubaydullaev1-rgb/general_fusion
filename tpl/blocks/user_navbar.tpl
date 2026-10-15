@@ -25,6 +25,11 @@
                 {include file='blocks/login_modal.tpl'}
             </span>
         {/if}
+
+        {* Mobile only: the theme switcher was moved from the top header to the profile menu *}
+        <div class="theme-toggle-wrap d-md-none">
+            {include file='blocks/theme_toggle.tpl'}
+        </div>
     </span>
 </span>
 {/if}

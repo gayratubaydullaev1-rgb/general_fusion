@@ -281,6 +281,8 @@ var flynaxTplClass = function(){
             createCookie('colorTheme', setTheme, 365);
 
             $icon.attr('xlink:href', setTheme == 'dark' ? '#theme-sun-icon' : '#theme-moon-icon');
+
+            document.documentElement.setAttribute('data-color-theme', setTheme);
         });
 
         if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -292,6 +294,18 @@ var flynaxTplClass = function(){
         if (cookieTheme) {
             $switcher.attr('data-theme', cookieTheme);
         }
+
+        document.documentElement.setAttribute('data-color-theme', $switcher.attr('data-theme') || 'light');
+
+        // Mobile: the toggle in the profile menu (and its clone in the account popup) drives the same switcher
+        $(document).on('click', '.js-theme-toggle', function(){
+            $switcher.trigger('click');
+        }).on('keydown', '.js-theme-toggle', function(e){
+            if (e.key == 'Enter' || e.key == ' ') {
+                e.preventDefault();
+                $switcher.trigger('click');
+            }
+        });
     }
 
     /**

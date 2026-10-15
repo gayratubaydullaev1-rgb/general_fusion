@@ -63,10 +63,14 @@ $(function(){
             fillEdge: true,
             caption: isLogin ? lang.account : '',
             content: isLogin
-                ? $('.account-menu-content:first').clone()
+                ? $('<div>').append(
+                    $('.account-menu-content:first').clone(),
+                    $('.theme-toggle-wrap:first').clone()
+                )
                 : $('<div class="d-flex flex-column justify-content-center flex-fill">').append(
                     $('<h3>', {class: 'mb-2'}).text(lang.login),
-                    $('#login_modal_source > .tmp-dom').clone(true, true)
+                    $('#login_modal_source > .tmp-dom').clone(true, true),
+                    $('.theme-toggle-wrap:first').clone()
                 ),
             width: 320,
             onShow: function(){

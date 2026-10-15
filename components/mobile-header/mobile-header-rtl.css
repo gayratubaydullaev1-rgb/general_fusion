@@ -1,0 +1,168 @@
+/**
+ * Mobile header (<768px only, desktop is not affected)
+ *
+ * Layout of the top header:  [menu] [ search field ............ ] [lang] [cart]
+ *  - logo and "All categories" (mega menu) button are hidden
+ *  - the smart search is moved into the top header by the script in header.tpl
+ *  - the cart takes the place of the color theme switcher
+ *  - the theme switcher lives in the user profile menu (.theme-toggle-wrap)
+ */
+
+/* theme toggle in the profile menu (rendered for mobile only, d-md-none) */
+.theme-toggle-wrap {
+    margin-top: 8px;
+    padding-top: 4px;
+    border-top: 1px solid var(--top-navigation-menu-border-color);
+}
+.theme-toggle {
+    min-height: 44px;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.9375em;
+    color: var(--body-font-color);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--form-field-line-color);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+.theme-toggle__icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+/* light theme: offer dark (moon), dark theme: offer light (sun) */
+.theme-toggle__sun,
+.theme-toggle__label_to-light {
+    display: none;
+}
+html[data-color-theme="dark"] .theme-toggle__moon,
+html[data-color-theme="dark"] .theme-toggle__label_to-dark {
+    display: none;
+}
+html[data-color-theme="dark"] .theme-toggle__sun {
+    display: inline;
+}
+html[data-color-theme="dark"] .theme-toggle__label_to-light {
+    display: inline;
+}
+
+@media screen and (max-width: 767px) {
+    /* top header: menu button + search + lang + cart */
+    header.page-header:not(.fixed-menu) div.top-header {
+        height: auto;
+        min-height: 56px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 0 !important;
+    }
+    header.page-header:not(.fixed-menu) div.top-header > .point1 > .d-flex {
+        align-items: center;
+        gap: 4px;
+    }
+    header.page-header:not(.fixed-menu) .top-header .main-menu {
+        flex: 0 0 auto;
+    }
+    header.page-header:not(.fixed-menu) .top-header .menu-button {
+        min-width: 44px;
+        height: 44px;
+        justify-content: center;
+        margin-right: -8px;
+    }
+
+    /* search field in the top header */
+    .mobile-search-slot:empty {
+        display: none;
+    }
+    .mobile-search-slot {
+        flex: 1 1 auto;
+        min-width: 0;
+        height: 40px;
+    }
+    .mobile-search-slot .smart-search {
+        width: 100%;
+    }
+    .mobile-search-slot .smart-search__input {
+        width: 100%;
+        height: 40px;
+        text-overflow: ellipsis;
+    }
+
+    /* opened search: full width overlay above the header */
+    .mobile-search-slot .smart-search_opened .smart-search__results-wrapper {
+        position: fixed;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        margin: 0;
+        max-height: calc(100vh - 12px);
+        max-height: calc(100dvh - 12px);
+        overflow-y: auto;
+        z-index: 400;
+    }
+    .mobile-search-slot .smart-search_opened .smart-search__form {
+        position: fixed;
+        top: 18px;
+        left: 18px;
+        right: 18px;
+        width: auto !important;
+        z-index: 401;
+    }
+
+    /* right part: language + cart (instead of the theme switcher) */
+    header.page-header:not(.fixed-menu) .user-navbar-right {
+        flex: 0 0 auto;
+        align-items: center;
+    }
+    .user-navbar-right #theme-switcher {
+        display: none !important; /* still in the DOM: the profile toggle drives it */
+    }
+    .user-navbar-right .cart-icon-container {
+        order: 5;
+        display: flex;
+        align-items: center;
+        min-width: 44px;
+        min-height: 44px;
+        justify-content: center;
+    }
+    .user-navbar-right .cart-icon-container > .default {
+        padding: 0;
+    }
+    .user-navbar-right .circle {
+        min-height: 44px;
+    }
+
+    /* logo, "All categories" (mega menu) button and the row that held them */
+    header.page-header:not(.fixed-menu) #logo,
+    header.page-header:not(.fixed-menu) .category-menu__button,
+    header.page-header:not(.fixed-menu) .category-menu__container {
+        display: none !important;
+    }
+    header.page-header:not(.fixed-menu) div.top-navigation {
+        display: none;
+    }
+
+    /* no bottom bar: the profile icon moves to the top header (see header.tpl) */
+    header.page-header .top-header .user-navbar .circle_opened > .content {
+        position: absolute;
+        z-index: 20;
+        top: 100%;
+        right: 0;
+        margin-top: 4px;
+        min-width: 220px;
+        padding: 8px 15px;
+        border-radius: 8px;
+        background: var(--top-navigation-background-color);
+    }
+    .user-navbar-right .user-navbar {
+        flex: 0 0 auto;
+        align-items: center;
+    }
+
+    /* home page: tidy spacing under the new header */
+    body.home-page header.page-header:not(.fixed-menu) .header-nav {
+        padding-top: 8px;
+    }
+}
