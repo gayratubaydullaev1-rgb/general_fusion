@@ -209,3 +209,14 @@ html[data-color-theme="dark"] .theme-toggle__label_to-light {
 #homeCarousel .carousel-caption {
     display: none !important;
 }
+
+/* header ad slot (e.g. 728x90): shrink to the screen instead of being cropped */
+@media screen and (max-width: 767px) {
+    div#header-banner img,
+    div#header-banner iframe,
+    div#header-banner ins,
+    div#header-banner video {
+        max-width: 100%;
+        height: auto;
+    }
+}
