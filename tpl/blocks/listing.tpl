@@ -28,7 +28,7 @@
                                 <img src="{if $listing.Main_photo}{$smarty.const.RL_FILES_URL}{$listing.Main_photo}{else}{$rlTplBase}img/blank_10x7.gif{/if}"
                                     {if $listing.Main_photo_x2}srcset="{$smarty.const.RL_FILES_URL}{$listing.Main_photo_x2} 2x"{/if}
                                     alt="{$listing.listing_title}"
-                                    loading="lazy" />
+                                    loading="lazy" decoding="async" />
                                 {else}
                                     <img class="pic-empty-{$smarty.section.pics.iteration} d-none" src="{$rlTplBase}img/blank_10x7.gif" alt="{$listing.listing_title}" />
                                     {if $smarty.section.pics.last && $listing.Photos_count > 5}
@@ -49,7 +49,8 @@
                     {else}
                         <img src="{if $listing.Main_photo}{$smarty.const.RL_FILES_URL}{$listing.Main_photo}{else}{$rlTplBase}img/blank_10x7.gif{/if}"
                         {if $listing.Main_photo_x2}srcset="{$smarty.const.RL_FILES_URL}{$listing.Main_photo_x2} 2x"{/if}
-                        alt="{$listing.listing_title}" />
+                        alt="{$listing.listing_title}"
+                        loading="lazy" decoding="async" />
                     {/if}
 
                     {rlHook name='tplListingItemPhoto'}

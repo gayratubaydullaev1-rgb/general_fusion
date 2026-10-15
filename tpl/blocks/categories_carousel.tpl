@@ -14,7 +14,7 @@
                     <a href="{$item.href}" id="{$item.Key}" class="categories-carousel__item-link d-block mr-1 mr-md-3">
                         <div class="categories-carousel__item-icon position-relative mb-1">
                             <span class="categories-carousel__item-icon-bg"></span>
-                            <img src="{$smarty.const.RL_FILES_URL}{$item.Icon}" alt="{$item.Name}" />
+                            <img src="{$smarty.const.RL_FILES_URL}{$item.Icon}" alt="{$item.Name}" decoding="async" />
                         </div>
                         {$item.Name}
                    </a>

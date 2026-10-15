@@ -17,16 +17,16 @@ $(function(){
     if (!$mbMenu.hasClass('mb-menu_no-hide')) {
         var menuHeight = $mbMenu.height();
 
-        $(window).scroll(function(event){
-            scrolling = true;
-        });
-
-        setInterval(function() {
+        window.addEventListener('scroll', function(){
             if (scrolling) {
+                return;
+            }
+            scrolling = true;
+            window.requestAnimationFrame(function(){
                 onScroll();
                 scrolling = false;
-            }
-        }, 250);
+            });
+        }, {passive: true});
 
         function onScroll() {
             var st = $(this).scrollTop();

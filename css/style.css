@@ -571,7 +571,7 @@ input[type="radio"]:not(.default):hover + label > span {
 }
 input[type="checkbox"]:not(.default):active + label > span,
 input[type="radio"]:not(.default):active + label > span {
-    border: 2px solid var();
+    border: 2px solid var(--form-field-line-color);
     box-shadow: inset 0 0 0 1px var(--content-background-color),
         inset 0 0 0 2px var(--form-checked-background-color-active);
 }
@@ -753,6 +753,25 @@ label.switcher > input[type="checkbox"]:checked ~ .status:before {
 }
 *:focus {
     outline: none;
+}
+/* keyboard users get a visible focus ring (mouse/touch focus is unchanged) */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+    outline: 2px solid var(--form-field-line-color);
+    outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 input[type="text"].error,
