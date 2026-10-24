@@ -69,6 +69,15 @@
             if (self.options.closeOnOutsideClick) {
                 $(document).bind('click touchstart', self.documentClick);
             }
+
+            // close by Escape
+            $(document).on('keydown', self.keyDown);
+        }
+
+        this.keyDown = function(event){
+            if (event.key == 'Escape' && self.$interface) {
+                self.close();
+            }
         }
 
         this.close = function(){
@@ -83,6 +92,7 @@
             // unbind listeners
             $(window).unbind('resize', self.setPosition);
             $(document).unbind('click touchstart', self.documentClick);
+            $(document).off('keydown', self.keyDown);
 
             // unlock body
             $('body.popup-no-scroll').removeClass('popup-no-scroll');
@@ -178,6 +188,7 @@
         this.buildUI = function(){
             this.$interface = $('<div>')
                 .addClass('popup')
+                .attr({role: 'dialog', 'aria-modal': 'true'})
                 .append($('<div>').append(
                     $('<div>')
                 ));
