@@ -246,3 +246,21 @@ html[data-color-theme="dark"] .theme-toggle__label_to-light {
         box-sizing: border-box;
     }
 }
+
+/* listing cards on mobile: titles may take two lines instead of being cut at one */
+@media screen and (max-width: 767px) {
+    section#listings.grid > article:not(.no-image) ul.card-info > li.title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        overflow: hidden;
+        max-height: none;
+        line-height: 1.3;
+        min-height: 2.6em;
+    }
+    section#listings.grid > article ul.card-info > li.title a {
+        white-space: normal;
+        word-break: break-word;
+    }
+}
