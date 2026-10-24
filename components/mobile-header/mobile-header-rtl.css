@@ -281,3 +281,20 @@ html[data-color-theme="dark"] .theme-toggle__label_to-light {
         max-width: 100%;
     }
 }
+
+/* mobile drawer: page does not scroll behind it */
+@media screen and (max-width: 767px) {
+    body.mobile-menu-open {
+        overflow: hidden;
+    }
+}
+
+/* rendering polish (all screens) */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+.page-footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 480px;
+}

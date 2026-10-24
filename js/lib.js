@@ -444,22 +444,39 @@ var flynaxTplClass = function(){
         var $header = $cont.find('.mobile-menu-header');
         var $closeButton = $header.find('svg');
 
-        $menuButton.unbind('click').click(function(){
+        var openMenu = function(){
             $menu
                 .removeClass('d-none')
                 .addClass('mobile-menu');
-        });
-        $closeButton.unbind('click').click(function(){
+            $('body').addClass('mobile-menu-open');
+            $menuButton.attr('aria-expanded', 'true');
+        };
+        var closeMenu = function(){
             $menu
                 .addClass('d-none')
                 .removeClass('mobile-menu');
+            $('body').removeClass('mobile-menu-open');
+            $menuButton.attr('aria-expanded', 'false');
+        };
+
+        $menuButton.attr('aria-expanded', 'false').unbind('click').click(openMenu);
+        $closeButton.unbind('click').click(closeMenu);
+
+        // Close the drawer by a tap outside of it or by Escape
+        $(document).on('click.mobileMenu', function(e){
+            if ($menu.hasClass('mobile-menu') && !$(e.target).closest('.mobile-menu, .menu-button').length) {
+                closeMenu();
+            }
+        }).on('keydown.mobileMenu', function(e){
+            if (e.key == 'Escape' && $menu.hasClass('mobile-menu')) {
+                closeMenu();
+                $menuButton.trigger('focus');
+            }
         });
 
         $(window).on('resize', function() {
             if ($(window).width() > 750) {
-                $menu
-                .addClass('d-none')
-                .removeClass('mobile-menu');
+                closeMenu();
             }
         });
     };
