@@ -4,7 +4,7 @@
 
   --link-color: #7F36C1;
   --link-color-hover: #111111;
-  --cat-link-color: #777777;
+  --cat-link-color: #6b6b6b;
   --cat-link-color-hover: #111111;
   --alt-link-color: #deb300;
   --alt-box-bg-color: rgba(204, 179, 227, 0.25);
@@ -66,7 +66,7 @@
   --listing-thumbnail-background-color: #EDEDED;
   --listing-background-color: #FFFFFF;
 
-  --info-field-color: #888888;
+  --info-field-color: #6b6b6b;
   --empty-category-color: #bbbbbb;
   --fieldset-header-background-color: #F5F5F5;
   --icon-favorite-fill: #BABABA;
@@ -85,7 +85,7 @@
   --tabs-side-block-border-color: #d4d4d4;
   --favorite-background-color: #ffffff;
   --listings-box-background-color: #F5F5F5;
-  --placeholder-color: #777777;
+  --placeholder-color: #6b6b6b;
   --border-color: #F5F5F5;
   --menu-shadow: 0 5px 17px rgba(17, 17, 17, 0.1), 0 10px 29px rgba(17, 17, 17, 0.06), 0 17px 41px rgba(17, 17, 17, 0.05), 0 47px 80px rgba(17, 17, 17, 0.1);
   --dropdown-arrow: url("../img/dropdown-arrow.svg");
@@ -93,7 +93,7 @@
   --card-corner-svg: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2017%2016%22%3E%3Cpath%20d%3D%22M0%200c8.837%200%2016%207.163%2016%2016h1V-1H0v1Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
 
   --footer-background-color: #F5F5F5;
-  --footer-text-color: #777777;
+  --footer-text-color: #6b6b6b;
   --footer-title-color: #111111;
   --footer-link-color: #777777;
   --footer-link-hover-color: #4D4D4D;
