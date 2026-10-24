@@ -298,7 +298,7 @@ var flynaxTplClass = function(){
         document.documentElement.setAttribute('data-color-theme', $switcher.attr('data-theme') || 'light');
 
         // Keyboard activation (Enter / Space) for non-native buttons
-        $(document).on('keydown', 'span[role="button"][tabindex], div[role="button"][tabindex]', function(e){
+        $(document).on('keydown', 'span[role="button"][tabindex], div[role="button"][tabindex], svg[role="button"][tabindex]', function(e){
             if ((e.key == 'Enter' || e.key == ' ') && !$(e.target).is('input, textarea, select')) {
                 e.preventDefault();
                 $(this).trigger('click');

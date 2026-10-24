@@ -2,14 +2,14 @@
 
 {include file=$componentDir|cat:'mobile-filter-icon/filter-icon.svg'}
 
-<svg viewBox="0 0 24 24" class="filter-icon mr-3 d-block d-lg-none">
+<svg viewBox="0 0 24 24" class="filter-icon mr-3 d-block d-lg-none" role="button" tabindex="0" aria-label="{$lang.search|escape}">
     <use xlink:href="#filter-icon"></use>
 </svg>
 
 <div class="filter-container h-100 w-100 position-fixed flex-column d-none">
     <div class="d-flex align-items-center filter-container__header align-items-center pl-3 pr-3">
         <div class="filter-container__header-title">{$lang.search}</div>
-        <svg viewBox="0 0 12 12" class="filter-container__header-close p-3">
+        <svg viewBox="0 0 12 12" class="filter-container__header-close p-3" role="button" tabindex="0" aria-label="{$lang.close|default:'Close'}">
             <use xlink:href="#close-icon"></use>
         </svg>
     </div>

@@ -3,7 +3,7 @@
 <div class="menu d-none d-md-flex h-100 flex-grow-1 flex-shrink-1 flex-basis-0 shrink-fix">
     <span class="mobile-menu-header d-none align-items-center order-1">
         <span class="mobile-menu-header-title">{$lang.menu}</span>
-        <svg viewBox="0 0 12 12" class="mobile-close-icon">
+        <svg viewBox="0 0 12 12" class="mobile-close-icon" role="button" tabindex="0" aria-label="{$lang.close|default:'Close'}">
             <use xlink:href="#close-icon"></use>
         </svg>
     </span>
