@@ -264,3 +264,20 @@ html[data-color-theme="dark"] .theme-toggle__label_to-light {
         word-break: break-word;
     }
 }
+
+/* footer on phones: menu columns side by side instead of one long list */
+@media screen and (max-width: 575px) {
+    .page-footer .footer-menu > .row > ul {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-right: 12px;
+    }
+    .page-footer .footer-menu > .row > ul:last-of-type:nth-of-type(odd) {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .page-footer .mobile-apps {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
