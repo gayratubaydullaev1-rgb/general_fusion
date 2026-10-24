@@ -1,6 +1,7 @@
 {include file='head.tpl'}
 
 {addCSS file=$rlTplBase|cat:'components/mobile-header/mobile-header.css'}
+{addCSS file=$rlTplBase|cat:'components/desktop-polish/desktop-polish.css'}
 
 {include file='../img/gallery.svg'}
 

@@ -1,0 +1,36 @@
+/**
+ * Desktop / tablet polish (>=768px only, phones are not affected)
+ */
+@media screen and (min-width: 768px) {
+    /* card titles: two lines instead of one cut line, equal card heights */
+    section#listings.grid > article:not(.no-image) ul.card-info > li.title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        overflow: hidden;
+        max-height: none;
+        line-height: 1.3;
+        min-height: 2.6em;
+    }
+    section#listings.grid > article ul.card-info > li.title a {
+        white-space: normal;
+        word-break: break-word;
+    }
+}
+
+/* hover effects only for devices that really hover, and not for reduced motion */
+@media screen and (min-width: 768px) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+    section#listings.grid article.item .picture img {
+        transition: filter 0.25s ease;
+    }
+    section#listings.grid article.item:hover .picture img {
+        filter: brightness(1.05);
+    }
+    a.categories-carousel__item-link .categories-carousel__item-icon {
+        transition: transform 0.2s ease;
+    }
+    a.categories-carousel__item-link:hover .categories-carousel__item-icon {
+        transform: translateY(-2px);
+    }
+}
