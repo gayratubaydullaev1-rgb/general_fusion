@@ -87,3 +87,7 @@ input.call-owner,
     font-size: 0.9375rem; }
     .contact-owner-navbar__btn svg {
       display: none; } }
+
+/* sidebar on desktop: the same two buttons in one row */
+.contact-owner-sidebar {
+  gap: 10px; }

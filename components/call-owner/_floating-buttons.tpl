@@ -1,6 +1,7 @@
 <!-- Call owner mobile floating buttons -->
 
 {if !$is_owner && $pageInfo.Controller == 'listing_details' && ($config.messages_module || $config.show_call_owner_button)}
+    {addCSS file=$rlTplBase|cat:'components/call-owner/call-owner-buttons.css'}
     <div class="contact-owner-navbar d-lg-none hlight w-100">
         <div class="point1 container mx-auto">
             <div class="contact-owner-navbar__row d-flex flex-nowrap content-padding">
