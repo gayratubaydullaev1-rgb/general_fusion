@@ -11,19 +11,79 @@
 
 input.call-owner,
 .side_block input[type=button].call-owner {
-  border-color: #45b150;
+  border-color: #2e7d32;
   color: white;
-  background: #45b150;
-  background-color: #45b150; }
+  background: #2e7d32;
+  background-color: #2e7d32; }
   input.call-owner:hover,
   .side_block input[type=button].call-owner:hover {
-    background-color: #30993b;
+    background-color: #256628;
     box-shadow: none;
     color: white; }
 
 .side_block input[type=button].call-owner {
-  background: #45b150;
+  background: #2e7d32;
   color: white !important; }
   .side_block input[type=button].call-owner:hover {
-    background: #30993b !important;
+    background: #256628 !important;
     color: white !important; }
+
+/* mobile contact bar: [Write] [Call] always in one row, equal width */
+.contact-owner-navbar {
+  background: var(--body-background-color, #fff); }
+.contact-owner-navbar__row {
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+.contact-owner-navbar__btn {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 48px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation; }
+  .contact-owner-navbar__btn svg {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round; }
+  .contact-owner-navbar__btn span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+.contact-owner-navbar__btn_write {
+  background: var(--button-color, #b90769); }
+  .contact-owner-navbar__btn_write:hover,
+  .contact-owner-navbar__btn_write:active {
+    background: var(--button-hover-color, #c60d73); }
+.contact-owner-navbar__btn_call {
+  background: #2e7d32; }
+  .contact-owner-navbar__btn_call:hover,
+  .contact-owner-navbar__btn_call:active {
+    background: #256628; }
+.contact-owner-navbar__btn:focus-visible {
+  outline: 2px solid var(--body-font-color, #111);
+  outline-offset: 2px; }
+
+@media screen and (max-width: 360px) {
+  .contact-owner-navbar__btn {
+    padding: 0 8px;
+    font-size: 0.9375rem; }
+    .contact-owner-navbar__btn svg {
+      display: none; } }
